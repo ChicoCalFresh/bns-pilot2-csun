@@ -160,7 +160,7 @@ xlbls <- as.character(c(seq(0,63,3), "66+"))
 tmp <- tmp2
 ```
 **Below is a breakdown of the academic workload, using the 3 hours of work per unit measurement `r print_n_reporting_tmp("q18")`** *Note that values denoted as "22+" are now "66+", but were rounded to 66 for the analysis below*.
-```{r, fig.width=7, eval=FALSE}
+```{r, fig.width=7}
 plot_frq(tmp$units, type='histogram', ylim = c(0,50), show.prc = FALSE, show.n = FALSE, show.mean = TRUE,show.mean.val = FALSE, show.sd = FALSE) +
   
   geom_boxplot(data=tmp, aes(x=units, y=40), alpha=0.8, width=10, fill="#587db6") +
