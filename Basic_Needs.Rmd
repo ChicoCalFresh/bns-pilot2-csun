@@ -292,7 +292,7 @@ names(questions) <- c('I have more time to receive assistance from the Accessibi
                       'I felt more confident in my ability to maintain healthy relationships.')
 
 plot_likert(questions,
-            grid.range = c(1.2, 1.2),
+            grid.range = c(1.4, 1.4),
             wrap.legend.labels = 20,
             expand.grid = FALSE,
             values = "sum.outside",
@@ -394,7 +394,7 @@ names(questions) <- c('I concentrated more in class(es).',
                       'I felt more confident in my ability to maintain healthy relationships.')
 
 plot_likert(questions,
-            grid.range = c(1.2, 1.2),
+            grid.range = c(1.4, 1.4),
             wrap.legend.labels = 20,
             expand.grid = FALSE,
             values = "sum.outside",
