@@ -14,12 +14,12 @@ source("common_code.R")
 page.num <- 10
 ```
 
-The following questions were asked in regard to students' sleep patterns. Questions consited of: their average nightly sleep during the academic year (on weekdays and weekends), if they feel sleep deprived, and what the causes of their sleep deprivation come from. They were also asked if they are tired at work/school, how often they are tired there, and if they have fallen asleep in class in the past year. 
+The following questions were asked in regard to students' sleep patterns. Questions included: their average nightly sleep during the academic year (on weekdays and weekends), if they feel sleep deprived, and what the causes of their sleep deprivation come from. They were also asked if they are tired at work/school, how often they are tired there, and if they have fallen asleep in class in the past year. 
 
 <br>
 
 ## Academic Year
-**On average, during the academic year, how many hours of sleep do you get in a typical 24-hour period?** *Note that for the week days we have `r print_n_reporting("q84")` And for the weekends we have `r print_n_reporting("q85")`*
+**On average, during the academic year, how many hours of sleep do you get in a typical 24-hour period?** *Note that for the week days we have `r print_n_reporting("q84")`, while for the weekends we have `r print_n_reporting("q85")`*
 
 #### During the Week (Monday-Friday)
 ```{r, fig.height=3.5, fig.width=7}
@@ -35,7 +35,7 @@ hist_with_box('q85', 45, 8, 0.4, NULL, c(0,55), 'Number of Hours')
 ```
 `r fig.cap(page.num, "Weekend Hours of Sleep Distribution")`
 
-During the week, students claim to get an average (denoted by the dotted line) of `r round(mean(bns$q84, na.rm = TRUE), 2)` hours per night, with a median of `r round(median(bns$q84, na.rm = TRUE), 2)` hours. During the weekend, students claim to get an average (denoted by the dotted line) of `r round(mean(bns$q85, na.rm = TRUE), 2)` hours per night, with a median of `r round(median(bns$q85, na.rm = TRUE), 2)` hours. Students get an average of `r round(mean(bns$q85, na.rm = TRUE), 2)-round(mean(bns$q84, na.rm = TRUE), 2)` more hours of sleep on the weekend versus during the week.
+During the week, students claim to get an average (denoted by the dotted line) of `r round(mean(bns$q84, na.rm = TRUE), 2)` hours of sleep per night, with a median of `r round(median(bns$q84, na.rm = TRUE), 2)` hours. During the weekend, students claim to get an average (denoted by the dotted line) of `r round(mean(bns$q85, na.rm = TRUE), 2)` hours per night, with a median of `r round(median(bns$q85, na.rm = TRUE), 2)` hours. Students get an average of `r round(mean(bns$q85, na.rm = TRUE), 2)-round(mean(bns$q84, na.rm = TRUE), 2)` more hours of sleep on the weekend versus during the week.
 
 <br>
 
@@ -92,7 +92,7 @@ plot_frq(bns$q88) + xlab('How Often') + ylab("Frequency")
 <div class = "col-md-4">
 <br><br><br>`r fig.cap(page.num, "Frequency of Tired at Work/School")` <br>
 
-The data indicates the most common response that people felt tired at work or school was `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[1])` (`r unname(sort(table(bns$q88), decreasing = TRUE))[1]` people). There were `r unname(sort(table(bns$q88), decreasing = TRUE))[2]` people that claimed they were `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[2])` tired, `r unname(sort(table(bns$q88), decreasing = TRUE))[3]` people claimed that they were `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[3])` tired, and `r unname(sort(table(bns$q88), decreasing = TRUE))[4]` person claimed that they were `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[4])` tired.
+The data indicates the most common response of how often people felt tired at work or school was "`r tolower(names(sort(table(bns$q88), decreasing = TRUE))[1])`" (`r unname(sort(table(bns$q88), decreasing = TRUE))[1]` people). There were `r unname(sort(table(bns$q88), decreasing = TRUE))[2]` people that claimed they were `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[2])` tired, `r unname(sort(table(bns$q88), decreasing = TRUE))[3]` people claimed that they were `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[3])` tired, and `r unname(sort(table(bns$q88), decreasing = TRUE))[4]` person claimed that they were `r tolower(names(sort(table(bns$q88), decreasing = TRUE))[4])` tired.
 </div>
 </div>
 

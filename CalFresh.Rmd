@@ -14,7 +14,7 @@ source("common_code.R")
 page.num <- 5
 ```
 
-The following questions were asked in regard to CalFresh requirement criteria. Criteria include U.S. citizenship (or lawful permanent resident), receiving Cal Grant A/B, and receiving food from a campus meal plan. Household size and monthly income is also looked at and broken down into a chart to show CalFresh eligibility. Students were also determined to be eligible or not for CalFresh based on their responses to these criteria questions.
+The following questions were asked in regard to CalFresh requirement criteria. Criteria include U.S. citizenship (or lawful permanent resident), receiving Cal Grant A/B, and receiving food from a campus meal plan. Household size and monthly income are also accounted for and broken down into a chart to determine Calfresh eligibility. Students were also determined to be eligible or not for CalFresh based on their responses to these criteria questions.
 
 ## CalFresh Criteria
 *Below are a series of Yes/No questions asked in order to help determine if a person is potentially eligible for CalFresh benefits.*
@@ -27,7 +27,7 @@ rnames <- c("Are you a U.S. citizen",
             "Are you on a campus meal plan")
 binary_table(qs, 'Yes', rnames, "?")
 ```
-Of the participants in the survey `r unname(table(bns$q38)['Yes'])` claim to be U.S. citizens and `r unname(table(bns$q38)['No'])` claim to not be U.S. citizens. For those who did not claim U.S. citizenship, `r unname(table(bns$q39)['Yes'])` people claim to be a lawful permanent residents and `r unname(table(bns$q39)['No'])` people do not claim to be lawful permanent residents. There are `r unname(table(bns$q40)['No'])` people who claim not to be approved for work study and `r unname(table(bns$q40)['Yes'])` who do claim to be approved for work study. There are `r unname(table(bns$q41)['No'])` students who do not receive Cal Grant A or B (consisting 12.4% of the data), and `r unname(table(bns$q41)['Yes'])` students who do receive Cal Grant A or B. The majority of people in the data (`r unname(table(bns$q44)['No'])` people) do not receive any meals from a campus meal plan. Further breakdown of the `r unname(table(bns$q44)['Yes'])` people that are on a campus meal plan claim the following assistance below:
+Of the participants in the survey `r unname(table(bns$q38)['Yes'])` claim to be U.S. citizens and `r unname(table(bns$q38)['No'])` claim to not be U.S. citizens. For those who did not claim U.S. citizenship, `r unname(table(bns$q39)['Yes'])` people claim to be lawful permanent residents while `r unname(table(bns$q39)['No'])` people do not claim to be lawful permanent residents. There are `r unname(table(bns$q40)['No'])` people who claim not to be approved for work study and `r unname(table(bns$q40)['Yes'])` who do claim to be approved for work study. There are `r unname(table(bns$q41)['No'])` students who do not receive Cal Grant A or B (consisting 12.4% of the data), and `r unname(table(bns$q41)['Yes'])` students who do receive Cal Grant A or B. The majority of people in the data (`r unname(table(bns$q44)['No'])` people) do not receive any meals from a campus meal plan. Further breakdown of the `r unname(table(bns$q44)['Yes'])` people that are on a campus meal plan claim the following assistance below:
 
 <br>
 
@@ -107,7 +107,7 @@ plot_frq(bns$calfresh_eligible, title = "Most Likely to be CalFresh Eligible") +
 <div class = "col-md-5">
 <br><br><br><br>`r fig.cap(page.num, "Eligible for CalFresh")` <br> 
 
-We can see that the majority of participants are most likely eligible for CalFresh (`r unname(table(bns$calfresh_eligible)['Yes'])` people), while `r unname(table(bns$calfresh_eligible)['No'])` people are most likely to not be eligible for these benefits.
+We can see that the majority of participants are most likely eligible for CalFresh (`r unname(table(bns$calfresh_eligible)['Yes'])` people), while `r unname(table(bns$calfresh_eligible)['No'])` people are most likely not eligible for these benefits.
 </div>
 </div>
 

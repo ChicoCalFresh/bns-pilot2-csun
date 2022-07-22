@@ -15,7 +15,7 @@ source("common_code.R")
 page.num <- 1
 ```
 
-The following set of questions were asked in regards to the students' personal demographics. Questions include the students' age at the time of the survey (2020), ethnicities they identify as, and the number of dependents they are responsible for taking care of. They were also asked about parents' education, which will help us identify first generation college students.
+The following set of questions were asked in regard to the students' personal demographics. Questions include the students' age at the time of the survey (2020), ethnicities they identify as, and the number of dependents they are responsible for taking care of. They were also asked about their parents' education, which will help us identify first generation college students.
 
 <br>
 
@@ -26,7 +26,7 @@ hist_with_box('age', 35, 5, 0.3, 1, c(0,40), 'Age (Years)')
 ```
 `r fig.cap(page.num, "Student Age Distribution")`
 
-The age for participants in the survey range from `r min(bns$age, na.rm = TRUE)` to `r max(bns$age, na.rm = TRUE)` at the time of completion, with the majority of participants being between 20-30 years old. The average age of a participant in this survey is `r round(mean(bns$age, na.rm = TRUE),1)` years old.
+The age of the participants in the survey range from `r min(bns$age, na.rm = TRUE)` to `r max(bns$age, na.rm = TRUE)` at the time of completion, with the majority of participants being between 20-30 years old. The average age of a participant in this survey is `r round(mean(bns$age, na.rm = TRUE),1)` years old.
 
 <br />
 
@@ -46,7 +46,7 @@ rm(q7.to.plot)
 <div class = "col-md-4">
 <br><br><br>`r fig.cap(page.num, "Student Gender Identity")` <br>
 
-Of the survey participants, `r unname(table(bns$q7)['Woman'])` of them identify as a woman, `r unname(table(bns$q7)['Man'])` identify as a man. There are also 4 survey participants who preferred not to answer this question.
+Of the survey participants, `r unname(table(bns$q7)['Woman'])` of them identify as a woman and `r unname(table(bns$q7)['Man'])` identify as a man. There are also 4 survey participants who preferred not to answer this question.
 
 
 </div>
@@ -112,7 +112,7 @@ plot_frq(bns$q11) + xlab('Number of Dependents') + ylab("Frequency")
 ```
 `r fig.cap(page.num, "Number of Dependents")`
 
-The majority of survey participants claim to have 0 dependents (`r unname(table(bns$q11)['0'])` people). `r unname(table(bns$q11)['1'])` survey participants claim to have only 1 dependent, and only `r nrow(bns[bns$q11 > 1, 'q11'] %>% na.omit())` claim to have 2 or more dependents.
+The majority of survey participants claim to have 0 dependents (`r unname(table(bns$q11)['0'])` people), `r unname(table(bns$q11)['1'])` survey participants claim to have only 1 dependent, and only `r nrow(bns[bns$q11 > 1, 'q11'] %>% na.omit())` claim to have 2 or more dependents.
 
 <br>
 
@@ -129,7 +129,7 @@ plot_frq(dep.ages.df$Ages, type='histogram', show.mean = TRUE, ylim=c(0,12), sho
 ```
 `r fig.cap(page.num, "Dependent Age Distribution")`
 
-From figure 1.8, the data indicates that the majority of dependents are under the age of 18. The ages of these dependents ranges from `r min(dep.ages)` to `r max(dep.ages)` with a standard deviation of `r round(sd(dep.ages),2)`. The average age for a dependent is `r round(mean(dep.ages),2)` while the median age is `r round(median(dep.ages),2)`. The most common dependent age is `r names(sort(table(dep.ages), decreasing=TRUE)[1])` years old, with `r unname(sort(table(dep.ages), decreasing=TRUE)[1])` survey participants having dependents of this age.
+From figure 1.5, the data indicates that the majority of dependents are under the age of 18. The ages of these dependents range from `r min(dep.ages)` to `r max(dep.ages)` with a standard deviation of `r round(sd(dep.ages),2)`. The average age of a dependent is `r round(mean(dep.ages),2)` while the median age is `r round(median(dep.ages),2)`. The most common dependent age is `r names(sort(table(dep.ages), decreasing=TRUE)[1])` years old, with `r unname(sort(table(dep.ages), decreasing=TRUE)[1])` survey participants having dependents of this age.
 
 <br>
 
@@ -150,12 +150,12 @@ ggplot(tmp, aes(x=factor(Var1, levels=Var1), y=Freq, fill=FirstGen, label=Percen
 
 *Note: Variables filled with yellow above are used to show the conditions used to build the First Generation variable--see figure 1.7 for further information*.
 
-The highest level of education completed by most survey participants' parents is "`r names(sort(table(bns$q13), decreasing=TRUE)[1])`" (`r unname(sort(table(bns$q13), decreasing=TRUE)[1])` people). `r unname(sort(table(bns$q13), decreasing=TRUE)[2])` survey participants claim their parents highest level is "`r names(sort(table(bns$q13), decreasing=TRUE)[2])`", and `r unname(sort(table(bns$q13), decreasing=TRUE)[3])` claim their parents highest level is "`r names(sort(table(bns$q13), decreasing=TRUE)[3])`". Only a minority of the survey participants have parents who have some type of college level degree.
+The highest level of education completed by most of the survey participants' parents is "`r names(sort(table(bns$q13), decreasing=TRUE)[1])`" (`r unname(sort(table(bns$q13), decreasing=TRUE)[1])` people), `r unname(sort(table(bns$q13), decreasing=TRUE)[2])` survey participants claim their parents' highest level is "`r names(sort(table(bns$q13), decreasing=TRUE)[2])`", and `r unname(sort(table(bns$q13), decreasing=TRUE)[3])` claim their parents' highest level is "`r names(sort(table(bns$q13), decreasing=TRUE)[3])`". Only a minority of the participants have parents who have some type of college level degree.
 
 <br />
 
 ### First Generation
-*Note: students with parents education identified as "Other/Unknown" were not marked as first gen or not since they could not be determined.* **`r print_n_reporting('firstgen')`**
+*Note: students with parents' education identified as "Other/Unknown" were not marked as first gen since they could not be determined.* **`r print_n_reporting('firstgen')`**
 
 <div class = "row">
 <div class = "col-md-6">
@@ -170,7 +170,7 @@ plot_frq(tmp$firstgen) + xlab('') + ylab("Frequency")
 <div class = "col-md-5">
 <br><br><br>`r fig.cap(page.num, "First Generation College Students")` <br>
 
-Figure 1.11, shows that `r unname(sort(table(bns$firstgen), decreasing=TRUE)[1])` survey participants are considered First Generation College students and `r unname(sort(table(bns$firstgen), decreasing=TRUE)[2])` survey participants are not considered First Generation College students. 
+Figure 1.7, shows that `r unname(sort(table(bns$firstgen), decreasing=TRUE)[1])` survey participants are considered First Generation College students and `r unname(sort(table(bns$firstgen), decreasing=TRUE)[2])` survey participants are not considered First Generation College students. 
 </div>
 </div>
 

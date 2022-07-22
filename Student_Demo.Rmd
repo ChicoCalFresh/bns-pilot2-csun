@@ -15,7 +15,7 @@ source("common_code.R")
 page.num <- 2
 ```
 
-The following set of questions were asked in regard to the students' academic demographics. This includes information such as their class standing, major, GPA, and number of enrolled units. They were also asked questions about programs they participate in as well as what type of student they are (transfer, international, etc.) to help identify students.
+The following set of questions were asked in regard to the students' academic demographics. This includes information such as their class standing, major, GPA, and number of enrolled units. They were also asked questions about programs they participate in as well as what type of student they are (transfer, international, etc.).
 
 <br>
 
@@ -82,7 +82,7 @@ plot_frq(bns$q17, wrap.labels = 8) + xlab('GPA') + ylab("Frequency")
 <div class = "col-md-4">
 <br><br><br><br> `r fig.cap(page.num, "Approximate Overall GPA")` <br>
 
-The highest frequency overall GPA for the data ranges between `r names(sort(table(bns$q17), decreasing=TRUE)[1])` (`r unname(sort(table(bns$q17), decreasing=TRUE)[1])` students), followed by `r names(sort(table(bns$q17), decreasing=TRUE)[2])` (`r unname(sort(table(bns$q17), decreasing=TRUE)[2])` students). There are also `r unname(sort(table(bns$q17), decreasing=TRUE)[3])` students who have an overall GPA between `r names(sort(table(bns$q17), decreasing=TRUE)[3])`.
+The highest reported overall GPA for the data ranges from `r names(sort(table(bns$q17), decreasing=TRUE)[1])` (`r unname(sort(table(bns$q17), decreasing=TRUE)[1])` students), followed by `r names(sort(table(bns$q17), decreasing=TRUE)[2])` (`r unname(sort(table(bns$q17), decreasing=TRUE)[2])` students). There are also `r unname(sort(table(bns$q17), decreasing=TRUE)[3])` students who have an overall GPA between `r names(sort(table(bns$q17), decreasing=TRUE)[3])`.
 </div>
 </div>
 
@@ -129,7 +129,7 @@ binary_table(questions, "Yes", rnames, ".")
 <br />
 
 ### Disability Support Services
-*Note*: This name varies by campus and may not always be called the Disability Support Service Center. The $n$ reported is the number of respondents who answered each question. Disagreement indicates that not all students answered both questions.
+*Note*: This name varies by campus and may not always be called the Disability Support Service Center. The $n$ reported is the number of respondents who answered each question. Disagreement in percentages indicates that not all students answered both questions.
 
 ```{r, fig.height=5, fig.width=7}
 questions <- paste0('q14_', 3:4)

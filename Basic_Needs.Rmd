@@ -49,7 +49,7 @@ plot_likert(questions,
 # Impact
 
 ## CalFresh EBT
-*Note: for the first graph on EBT application we have `r print_n_reporting("q47")` And for the second graph on how many people are fed we have `r print_n_reporting("fed_through_EBT")`*
+*Note: for the first graph on EBT application we have `r print_n_reporting("q47")`, and for the second graph on how many people are fed we have `r print_n_reporting("fed_through_EBT")`*
 ```{r, fig.width=8.5}
 p1 <- plot_frq(bns$q47, ylim=c(0,35), wrap.title = 40, wrap.labels = 15, 
                title="Did you apply for CalFresh EBT as an individual or with other people in your household?") +
@@ -61,7 +61,7 @@ rm(p1,p2)
 ```
 `r fig.cap(page.num, "CalFresh EBT: Application & Feeding")`
 
-That data indicates that the majority of people apply for CalFresh EBT as an individual (`r unname(table(bns$q47)['As an individual'])` people) compared to `r unname(table(bns$q47)['With other people in my household'])` people applied with other people in their household. Similarly, the majority of people claimed only `r names(sort(table(bns$fed_through_EBT), decreasing = TRUE))[1]` person is fed through the EBT card (`r unname(sort(table(bns$fed_through_EBT), decreasing = TRUE))[1]` people). `r unname(sort(table(bns$fed_through_EBT), decreasing = TRUE))[2]` people claim to feed `r names(sort(table(bns$fed_through_EBT), decreasing = TRUE))[2]` people through the EBT card, and only a small amount of people claim to feed 5 or more people through the EBT card.
+That data indicates that the majority of people apply for CalFresh EBT as an individual (`r unname(table(bns$q47)['As an individual'])` people) compared to `r unname(table(bns$q47)['With other people in my household'])` people applied with other people in their household. Similarly, the majority of people claim only `r names(sort(table(bns$fed_through_EBT), decreasing = TRUE))[1]` person is fed through the EBT card (`r unname(sort(table(bns$fed_through_EBT), decreasing = TRUE))[1]` people), `r unname(sort(table(bns$fed_through_EBT), decreasing = TRUE))[2]` people claim to feed `r names(sort(table(bns$fed_through_EBT), decreasing = TRUE))[2]` people through the EBT card, and only a small amount of people claim to feed 5 or more people through the EBT card.
 
 <br>
 
@@ -94,12 +94,12 @@ tmp %>% kable() %>% kable_styling(bootstrap_options = "striped") %>%
 ```
 Table 6.1: CalFresh by Household Size  
 
-Looking at the above table, the general pattern seems to be that as household size increases so does the monthly average assistance from CalFresh. The household average was divided by the household size to find the "per person average" for CalFresh assistance. The overall average per-person monthly assistance is `r tmp[7,3]`.
+Looking at the above table, the general pattern seems to be that as household size increases so does the monthly average assistance from CalFresh. The household average was divided by the household size to find the "per person average" for CalFresh assistance. The overall monthly assistance average per-person is  `r tmp[7,3]`.
 
 <br>
 
 ### Is This Enough?
-*Note: for the first graph on if the allowance is enough we have `r print_n_reporting("q50")` And for the second graph on when people run out we have `r print_n_reporting("q51")`*
+*Note: for the first graph on if the allowance is enough we have `r print_n_reporting("q50")`, while for the second graph for when people run out we have `r print_n_reporting("q51")`*
 ```{r, fig.height=4.5, fig.width=8.5}
 p1 <- plot_frq(bns$q50, title="Do you feel that this is enough money to provide healthy food for the month?") + xlab('')
 p2 <- plot_frq(bns$q51, ylim=c(0,14), wrap.labels = 12, title="If \"No\", then when do you typically run out?") + xlab('')
@@ -109,7 +109,7 @@ rm(p1,p2)
 ```
 `r fig.cap(page.num, "Enough Monthly Allowance and Time of Exhaustion")`
 
-Of the people who do receive money from CalFresh, `r unname(table(bns$q50)['Yes'])` of them claim that it is enough money to provide healthy food for a month and `r unname(table(bns$q50)['No'])` of them feel that it is not enough. People who do not feel it is enough money typically run out of CalFresh money in either the second week (`r unname(table(bns$q51)['Second week after receiving benefits'])` people) or third week (`r unname(table(bns$q51)['Third week after receiving benefits'])` people). A small group also run out within the first week, while an even smaller minority run out in the fourth week.
+Of the people who do receive money from CalFresh, `r unname(table(bns$q50)['Yes'])` of them claim that it is enough money to provide healthy food for a month and `r unname(table(bns$q50)['No'])` of them feel that it is not enough. People who do not feel it is enough money typically run out of CalFresh money in either the second week (`r unname(table(bns$q51)['Second week after receiving benefits'])` people) or third week (`r unname(table(bns$q51)['Third week after receiving benefits'])` people). A small group also runs out within the first week, while an even smaller minority runs out in the fourth week.
 
 <br>
 

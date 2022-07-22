@@ -14,7 +14,7 @@ source("common_code.R")
 page.num <- 7
 ```
 
-The following questions were asked in regard to students' feelings towards food security due to a lack of or no money. Students were asked in they had to cut or skip meals (and how often), went entire days without eating, and other situations due to a lack of money. Students were also asked how they handled situations when they had run out of money for food, and if they had received any assistance.
+The following questions were asked in regard to students' feelings towards food security due to a lack of or no money. Students were asked if they had to cut or skip meals (and how often), went entire days without eating, and other situations due to a lack of money. Students were also asked how they handled situations when they had run out of money for food, and if they had received any assistance.
 
 
 <br>
@@ -43,7 +43,7 @@ plot_likert(questions,
 <br>
 
 ### Food Insecurity
-Food insecurity was determined using the two item food insecurity screening questions. If a student answered "sometimes true" or "often true" to either question, they were considered to be food insecure `r print_n_reporting("food_insecure_2item")`.:
+Food insecurity was determined using the two-item food insecurity screening questions. If a student answered "sometimes true" or "often true" to either question, they were considered to be food insecure `r print_n_reporting("food_insecure_2item")`.:
 
 - "I/We worried whether food would run out before I/we got money to buy more."
 - "The food that I/we bought just didn’t last, and I/we didn’t have money to get more."
@@ -59,7 +59,7 @@ plot_frq(bns$two.item, ylim=c(0,70)) + xlab('Food Insecure') + ylab("Frequency")
 </div>
   
 <div class = "col-md-4">
-<br><br><br> `r fig.cap(page.num, "Two Item Food Insecure")` <br>
+<br><br><br> `r fig.cap(page.num, "Two-Item Food Insecure")` <br>
 
 Of the survey participants, the data indicates that `r unname(table(bns$two.item)['Yes'])` people are considered to be food insecure. There are `r unname(table(bns$two.item)['No'])` survey participants considered not to be food insecure, meaning they answered "never true" to the above question criteria.
 
@@ -84,7 +84,7 @@ grid.arrange(plt1, plt2, nrow=1, ncol=2, widths=c(2.7, 5.3))
 ```
 `r fig.cap(page.num, "Cut/Skip Meal: Identification & Distribution")`
 
-The majority of people claim that they did not have to skip meals due to not having enough money (`r unname(table(bns$q67)['No'])` people) . However, `r unname(table(bns$q67)['Yes'])` people claimed that they did have to skip meals due to not having enough money. Of the people that did skip meals, the average number of days where they had to skip/cut a meal (denoted by the dotted line) was `r round(mean(bns$q68, na.rm = TRUE))` days, while the median was `r round(median(bns$q68, na.rm = TRUE))` days. The majority of the data is below 10 days, but a small amount of students did report skipping/cutting a meal more than 10 days in the last month.
+The majority of people claim that they did not have to skip meals since they had enough money (`r unname(table(bns$q67)['No'])` people). However, `r unname(table(bns$q67)['Yes'])` people claimed that they did have to skip meals due to not having enough money. Of the people that did skip meals, the average number of days where they had to skip/cut a meal (denoted by the dotted line) was `r round(mean(bns$q68, na.rm = TRUE))` days, while the median was `r round(median(bns$q68, na.rm = TRUE))` days. The majority of the data is below 10 days, but a small amount of students did report skipping/cutting a meal more than 10 days in the last month.
 
 <br>
 
@@ -99,12 +99,12 @@ grid.arrange(plt1, plt2, nrow=1, ncol=2, widths=c(2.7, 5.3))
 ```
 `r fig.cap(page.num, "No Food All Day: Identification & Distribution")`
 
-Over the past 30 days at the time of the survey, `r unname(table(bns$q72)['No'])` people claimed they did not have to skip eating for a full day due to not having enough money for food and `r unname(table(bns$q72)['Yes'])` people claimed that they did skip eating for a full day. Of the people that did skip meals for an entire day, the average number of days where they had to skip/cut all meals (denoted by the dotted line) was `r round(mean(bns$q73, na.rm = TRUE))` days, while the median was `r round(median(bns$q73, na.rm = TRUE))` days. The majority of the data is below 5 days, but a small amount of students did report skipping/cutting a meal more than 5 days in the last month.
+Over the past 30 days at the time of the survey, `r unname(table(bns$q72)['No'])` people claimed they did not have to skip eating for a full day since they had enough money and `r unname(table(bns$q72)['Yes'])` people claimed that they did skip eating for a full day. Of the people that did skip meals for an entire day, the average number of days where they had to skip/cut all meals (denoted by the dotted line) was `r round(mean(bns$q73, na.rm = TRUE))` days, while the median was `r round(median(bns$q73, na.rm = TRUE))` days. The majority of the data is below 5 days, but a small amount of students did report skipping/cutting a meal more than 5 days in the last month.
 
 <br>
 
 ### More Eating Situations
-**Below are more questions asked in regards to the students eating situations due to lack of money.**  
+**Below are more questions asked in regards to students eating situations due to a lack of money.**  
 *Note: these are a series of Yes/No questions with only the "Yes" responses being displayed along with the percent of the data it composes.*
 ```{r, fig.width=7}
 questions <- c('q69', 'q70', 'q71')
