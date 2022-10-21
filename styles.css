@@ -1,0 +1,211 @@
+:root {
+  --primary: #4d0000;
+  --border: #FFAD00;
+  --orange: #FFAD00; 
+  --ltan: #fcfadc;
+}
+
+
+
+/* table of contents*/
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #000000;
+    background-color: #a9a8a9;
+    border-color: #a9a8a9;
+}
+
+/* build navbar: https://work.smarchal.com/twbscolor/3.3.2/css/55565ad8d2c4ffffff0000001
+Must use bootstrap 3.3.2
+*/
+
+/*  CSU Northridge branded colors: https://www.csun.edu/identity/color-palette
+Default Background: CSUN Secondary Color: Cool Gray 11: HEX:#55565a
+Active Background: CSUN Tertiary Color: Cream Pantone 7527: HEX:#d8d2c4
+Defualt Color(Text):White HEX#:#ffffff
+Active Color: Black HEX#:#000000
+*/
+
+/* Overall background color */
+.navbar-default {
+  background-color: #55565a;
+  border-color: #d8d2c4;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #000000;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #55565a;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #000000;
+  background-color: #d8d2c4;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #d8d2c4;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #d8d2c4;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: #d8d2c4;
+}
+.navbar-default .navbar-toggle {
+  border-color: #d8d2c4;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #d8d2c4;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #000000;
+    background-color: #d8d2c4;
+  }
+}
+/*
+
+
+/* build navbar: https://work.smarchal.com/twbscolor/3.3.2/css/55565ad22030ffffff0000001
+Must use bootstrap 3.3.2
+*/
+
+/*  CSU Northridge branded colors: https://www.csun.edu/identity/color-palette
+Default Background: CSUN Secondary Color: Cool Gray 11: HEX:#55565a
+Active Background: CSUN Primary Color: CSUN Red Pantone 186: HEX:#d22030
+Defualt Color(Text):White HEX#:#ffffff
+Active Color: Black HEX#:#000000
+*/
+
+/* Overall background color
+.navbar-default {
+  background-color: #55565a;
+  border-color: #d22030;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #000000;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #55565a;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #000000;
+  background-color: #d22030;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #d22030;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #d22030;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: #d22030;
+}
+.navbar-default .navbar-toggle {
+  border-color: #d22030;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #d22030;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #000000;
+    background-color: #d22030;
+  }
+}
+ */ 
