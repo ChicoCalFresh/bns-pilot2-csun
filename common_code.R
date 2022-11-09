@@ -136,7 +136,7 @@ prep_binary_vars <- function(question, xlabels) {
 }
 
 # Load data
-load("C:/Users/rdonatello/Box/CHC All/01. Projects Active/CFO (SP6495202)/08. Research and Evaluation/02. Data Analysis/BNS3-pilot2/data/BNSp2_clean.Rdata")
+load("C:/Users/15307/Box/CHC All/01. Projects Active/CFO (SP6495202)/08. Research and Evaluation/02. Data Analysis/BNS3-pilot2/data/BNSp2_clean.Rdata")
 #bns <- BNSp2b
 
 # Filter to only CSUN
