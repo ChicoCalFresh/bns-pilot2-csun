@@ -15,7 +15,7 @@ page.num <- 1
 ```
 
 
-- The website is a tool to present exploratory data analysis results. Results are shown for CSU, Northridge State campus.
+- The website is a tool to present exploratory data analysis results. Results are shown for CSU, Northridge campus.
 - Each tab on the header of the website corresponds to a set of questions within the Basic Needs Survey. Some of these tabs have a drop-down menu (denoted by a down arrow) to further organize questions by topics.
 - The top of each page contains a brief paragraph which explains a general overview of questions captured on the page.
 - Within the page, questions were plotted using the most appropriate style for the questions (histogram, barplot, table, etc.). Each graph then has a brief description below it analyzing the results of the graph with the appropriate summary statistics (minimum, mean, max, proportions, etc.).
